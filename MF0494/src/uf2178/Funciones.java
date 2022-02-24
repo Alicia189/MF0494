@@ -50,8 +50,8 @@ public class Funciones {
 
 		Scanner entrada = new Scanner(System.in);
 		for (int i= 0; i< v.length; i++) 
-			v[i] = [10,12,15,8,4,9]
-			v[j] = [2,3,4,2,6,3]
+			v[i] = {10,12,15,8,4,9};
+			v[j] = {2,3,4,2,6,3};
 					
 	
 	

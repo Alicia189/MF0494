@@ -5,6 +5,7 @@ package controlador;
 
 import java.util.ArrayList;
 
+import dao.InfractorDAO;
 import dao.SancionDAO;
 import modelo.Sancion;
 import vista.DialogoInsertarInfractor;
@@ -24,6 +25,7 @@ public class Controlador {
 	
 	// Objetos DAO o CRUD de la base de datos
 	private SancionDAO sancionDAO;
+	private InfractorDAO infractorDAO;
 
 	
 	public Controlador() {
@@ -39,6 +41,8 @@ public class Controlador {
 		
 		// Creamos los objetos DAO
 		sancionDAO = new SancionDAO();
+		InfractorDAO = new InfractorDAO();
+		
 	}
 	
 	public void inciarPrograma() {
@@ -46,9 +50,9 @@ public class Controlador {
 	}
 
 	public void mostrarInsertarInfractores () {
-		ArrayList<Sancion> listaSanciones = new ArrayList<Sancion>();
-		listaSanciones = sancionDAO.obtenerSanciones();
-		dialogoInsertarInfractor.setListaSanciones(listaSanciones);
+		ArrayList<Infractor> listaInfractores = new ArrayList<Infractor>();
+		listaInfractores = InfractorDAO.obtenerInfractores();
+		dialogoInsertarInfractor.setListaInfractor(listaInfractor);
 		dialogoInsertarInfractor.setVisible(true);
 	}
 	
